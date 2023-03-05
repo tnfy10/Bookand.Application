@@ -28,7 +28,7 @@ jobs:
         run: flutter pub run build_runner build --delete-conflicting-outputs
 
       - name: Flutter build apk
-        run: flutter build apk --flavor dev --release
+        run: flutter build apk -t lib/core/main.dart --flavor dev --release
 
       - name: Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
